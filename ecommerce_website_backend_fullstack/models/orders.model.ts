@@ -5,13 +5,13 @@ const ordersSchema = new mongoose.Schema(
     product_id: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
-      ref: "products",
+      ref: "Products",
     },
 
     user_id: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "users",
       required: true,
+      ref: "Users",
     },
 
     quantity: {

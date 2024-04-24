@@ -4,7 +4,8 @@ import cartsModel from "../../../../models/carts.model";
 
 const removeItemFromCart = async (req: Request, res: Response) => {
   const { cart_id } = req.body;
-
+  console.log(" ");
+  console.log(req.body);
   //general validations
   if (!cart_id) throw "cart id required";
   if (!validator.isMongoId(cart_id)) throw "invalid cart id provided";

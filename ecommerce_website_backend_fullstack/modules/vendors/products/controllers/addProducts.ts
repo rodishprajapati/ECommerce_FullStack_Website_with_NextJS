@@ -3,8 +3,13 @@ import validator from "validator";
 import productsModel from "../../../../models/products.model";
 
 const addProducts = async (req: Request, res: Response) => {
-  const { product_name, product_image, product_details, product_price } =
-    req.body;
+  const {
+    product_name,
+    product_image,
+    product_detail,
+    product_price,
+    product_rating,
+  } = req.body;
 
   if (!product_name) throw "product name required!";
   if (!product_price) throw "product price required!";
@@ -15,8 +20,9 @@ const addProducts = async (req: Request, res: Response) => {
     vendor_id: req.vendor.vendor_id,
     product_name,
     product_price,
-    product_details,
+    product_detail,
     product_image,
+    product_rating,
   });
 
   res.status(200).json({

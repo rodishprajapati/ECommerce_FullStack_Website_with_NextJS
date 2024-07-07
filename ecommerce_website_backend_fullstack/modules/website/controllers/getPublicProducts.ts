@@ -8,7 +8,7 @@ const getPublicProducts = async (req: Request, res: Response) => {
 
   const data = await productsModel
     .find(req.query)
-    .limit(parseInt((pagination_limit ?? 5).toString()));
+    .limit(parseInt((pagination_limit ?? 10).toString()));
 
   res.status(200).json({
     status: "success",

@@ -1,6 +1,8 @@
 import { Button, Checkbox, Form, FormProps, Input } from "antd";
 import axios from "axios";
 import React from "react";
+import { message } from "antd";
+
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -16,11 +18,15 @@ const Login = () => {
       );
       localStorage.setItem("accessToken", response.data.accessToken);
       navigate("/");
-      // console.log(localStorage.accessToken);
+      console.log(localStorage.accessToken);
 
       console.log("successfully loggedIn");
-    } catch (error) {
-      console.log(error);
+    } catch (e: any) {
+      if (e && e.response && e.response.data && e.response.data.message) {
+        message.error(e.response.data.message);
+      } else {
+        message.error("Connection failed. Try again!");
+      }
     }
   };
 

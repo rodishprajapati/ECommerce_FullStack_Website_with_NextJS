@@ -21,8 +21,11 @@ const productsSchema = new mongoose.Schema(
       type: String,
     },
 
-    Product_detail: {
+    product_detail: {
       type: String,
+    },
+    product_rating: {
+      type: Number,
     },
   },
   {

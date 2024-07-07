@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import React from "react";
+import Header from "../pageComponents/header";
 
 const MainPage = () => {
   useEffect(() => {
@@ -11,6 +12,7 @@ const MainPage = () => {
 
   return (
     <>
+      <Header />
       <h1>this is main page</h1>
     </>
   );

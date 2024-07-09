@@ -21,7 +21,6 @@ mongoose
 
 import "./model";
 import VendorsAuthRoute from "./modules/vendors/auth/vendors.auth.routes";
-import AdminAuthRoute from "./modules/admin/admins.auth.routes";
 import UserRouter from "./modules/users/user.routes";
 import VendorProductsRoute from "./modules/vendors/products/vendors.products.routes";
 import WebsiteProductsRouter from "./modules/website/website.products.routes";
